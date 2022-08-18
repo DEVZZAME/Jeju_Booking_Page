@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>루체빌 예약 내역 확인</h1>
+
+  <% for (var i = 0; i < posts.length; i ++) { %>
+    <p>이름 : <%=posts[i].이름 %>
+    </p>
+    <p>연락처 : <%=posts[i].연락처 %>
+    </p>
+    <p>오는날 : <%=posts[i].오는날 %>
+    </p>
+    <p>가는날 : <%=posts[i].가는날 %>
+    </p>
+    <p>목적 : <%=posts[i].목적 %>
+    </p>
+    <p>인원 : <%=posts[i].인원 %>
+    </p><br>
+  <% } %>
+
+</body>
+
+</html>

@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>메인</title>
+  <style>
+    body {
+      color: #707070;
+    }
+
+    a {
+      text-decoration: none;
+      color: #707070;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+    }
+
+    h1 {
+      width: 340px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .top .top_left {
+      width: 160px;
+      height: 130px;
+      line-height: 130px;
+      text-align: center;
+      font-size: 22px;
+      margin-right: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .top .top_right {
+      width: 160px;
+      height: 130px;
+      line-height: 130px;
+      text-align: center;
+      font-size: 22px;
+      border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .middle {
+      width: 340px;
+      height: 130px;
+      line-height: 130px;
+      text-align: center;
+      font-size: 32px;
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      background-color: #2badff;
+    }
+
+    .middle a,
+    .bottom a {
+      color: #fff;
+    }
+
+    .bottom {
+      width: 340px;
+      height: 130px;
+      line-height: 130px;
+      text-align: center;
+      font-size: 32px;
+      border-radius: 20px;
+      margin-bottom: 20px 0;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      background-color: #c7c7c7;
+    }
+
+    .admin {
+      width: 340px;
+      margin-top: 40px;
+    }
+
+    .admin>p {
+      text-align: center;
+      font-size: 20px;
+    }
+    .admin>a {
+      display: block;
+      text-align: center;
+      font-size: 20px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
+    <h1>루체빌</h1>
+    <div class="top">
+      <div class="top_left">
+        <a href="/notice">공지사항</a>
+      </div>
+      <div class="top_right">
+        <a href="/detail">숙소설명</a>
+      </div>
+    </div>
+    <div class="middle">
+      <a href="/booking">예약하기</a>
+    </div>
+    <div class="bottom">
+      <a href="/map">찾아가는 길</a>
+    </div>
+    <div class="admin">
+      <p>관리자 문의</p>
+      <a href="tel:01072161182"> 010-7216-1182 <img></a>
+    </div>
+  </div>
   
+  <script>
+    var lock = 0;
+    while(lock == 0){
+      var bypass = prompt('암호를 입력해 주십시오.');
+      if(bypass == 1234){
+        lock = 1;
+        alert('환영합니다.')
+      }else{
+        lock = 0;
+        alert('암호를 올바르게 입력해 주십시오.')
+      }
+    }
+  </script>
 </body>
+
 </html>
